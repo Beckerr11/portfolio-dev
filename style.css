@@ -13,8 +13,27 @@ color:#00ff9c;
 
 }
 
+h2{
+
+margin-top:40px;
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+li{
+
+margin:10px;
+
+}
+
 a{
 
 color:#00ff9c;
+text-decoration:none;
 
 }
