@@ -1,45 +1,31 @@
-# 💻 Portfolio Dev
+# Portfolio Dev
 
-Portfólio simples desenvolvido para apresentar meus projetos e tecnologias.
+Static portfolio page built with HTML, CSS, and JavaScript.
 
-## 📌 Sobre
+## Overview
 
-Este projeto é uma página web que mostra:
+This project is a lightweight personal portfolio focused on:
 
-- Informações sobre mim
-- Tecnologias que estudo
-- Projetos desenvolvidos
-- Link para meu GitHub
+- clear presentation
+- selected project highlights
+- direct contact paths
+- responsive layout without frameworks
 
-## 🚀 Tecnologias
+## Stack
 
 - HTML
 - CSS
 - JavaScript
 
-## 📂 Estrutura do Projeto
+## Local usage
 
-```
-portfolio-dev
- ├ index.html
- ├ style.css
- ├ script.js
- └ README.md
-```
+Open `index.html` in the browser, or serve the folder with any static server.
 
-## ▶ Como executar
+## Links
 
-1. Baixe ou clone o repositório
-2. Abra o arquivo:
+- GitHub: https://github.com/Beckerr11
+- LinkedIn: https://www.linkedin.com/in/douglassilva11
 
-```
-index.html
-```
+## Author
 
-no navegador.
-
-## 👨‍💻 Autor
-
-Douglas Aparecido da Silva
-
-GitHub: https://github.com/Beckerr11
+Douglas Aparecido Silva

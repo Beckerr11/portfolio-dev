@@ -1,39 +1,371 @@
-body{
-
-font-family: Arial;
-background:#111;
-color:white;
-text-align:center;
-
+:root {
+  color-scheme: light;
+  --bg: #f5f7fb;
+  --surface: rgba(255, 255, 255, 0.92);
+  --surface-strong: #0f172a;
+  --text: #0f172a;
+  --muted: #4b5563;
+  --line: rgba(15, 23, 42, 0.09);
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.12);
+  --shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+  --radius: 28px;
 }
 
-h1{
-
-color:#00ff9c;
-
+* {
+  box-sizing: border-box;
 }
 
-h2{
-
-margin-top:40px;
-
+html {
+  scroll-behavior: smooth;
 }
 
-ul{
-
-list-style:none;
-
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.14), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+  color: var(--text);
+  font-family: "Space Grotesk", sans-serif;
 }
 
-li{
-
-margin:10px;
-
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-a{
+.page-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0 40px;
+}
 
-color:#00ff9c;
-text-decoration:none;
+.surface,
+.surface-secondary {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
 
+.surface {
+  background: var(--surface);
+}
+
+.surface-secondary {
+  background: var(--surface-strong);
+  color: #e5eefc;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.9fr);
+  gap: 24px;
+  padding: 28px;
+}
+
+.hero-copy h1,
+.section-heading h2,
+.section-card h2 {
+  margin: 0;
+  font-family: "Archivo", sans-serif;
+  line-height: 0.98;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  max-width: 10ch;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.hero-text,
+.section-card p,
+.project-card p,
+.footer-copy {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.hero-text {
+  max-width: 58ch;
+  margin: 20px 0 0;
+  font-size: 1.04rem;
+}
+
+.hero-actions,
+.card-actions,
+.footer-links,
+.pill-row,
+.signal-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-actions {
+  margin-top: 24px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 700;
+  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.button-secondary {
+  background: transparent;
+  border-color: rgba(37, 99, 235, 0.22);
+  color: var(--accent);
+}
+
+.signal-row {
+  margin-top: 24px;
+}
+
+.signal-card {
+  min-width: 140px;
+  padding: 16px 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+}
+
+.signal-card strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.signal-card span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.hero-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+}
+
+.identity-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  font-family: "Archivo", sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2563eb, #0f172a 72%);
+}
+
+.identity-name {
+  margin: 0;
+  font-size: 1.06rem;
+  font-weight: 700;
+}
+
+.identity-role {
+  margin: 4px 0 0;
+  color: rgba(229, 238, 252, 0.74);
+}
+
+.stack-list {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.7;
+  color: rgba(229, 238, 252, 0.84);
+}
+
+.inline-link {
+  color: #bfdbfe;
+  font-weight: 700;
+}
+
+.section-block,
+.split-section {
+  margin-top: 28px;
+}
+
+.section-heading {
+  margin-bottom: 16px;
+}
+
+.section-heading h2,
+.section-card h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+}
+
+.project-grid,
+.split-section {
+  display: grid;
+  gap: 18px;
+}
+
+.project-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.project-card,
+.section-card,
+.footer {
+  padding: 22px;
+}
+
+.project-card {
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(37, 99, 235, 0.22);
+  box-shadow: 0 24px 50px rgba(37, 99, 235, 0.1);
+}
+
+.project-tag,
+.pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.project-card h3 {
+  margin: 16px 0 10px;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.35rem;
+}
+
+.card-actions {
+  margin-top: 18px;
+}
+
+.card-actions a,
+.footer-links a {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.split-section {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.footer {
+  margin-top: 28px;
+  display: grid;
+  gap: 16px;
+}
+
+.footer-title {
+  margin: 0;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.18rem;
+}
+
+.footer-copy {
+  margin: 8px 0 0;
+}
+
+body.is-ready .surface {
+  animation: rise-in 520ms ease both;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 960px) {
+  .hero,
+  .project-grid,
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy h1 {
+    max-width: 12ch;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 20px, 1120px);
+    padding: 20px 0 32px;
+  }
+
+  .hero,
+  .project-card,
+  .section-card,
+  .footer {
+    padding: 18px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.2rem, 14vw, 3.4rem);
+  }
+
+  .signal-card {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }
