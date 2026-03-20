@@ -2,6 +2,10 @@
 
 Static portfolio page built with HTML, CSS, and JavaScript.
 
+## Live demo
+
+https://portfolio-dev-alpha-orcin.vercel.app
+
 ## Overview
 
 This project is a lightweight personal portfolio focused on:
