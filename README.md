@@ -28,8 +28,8 @@ Open `index.html` in the browser, or serve the folder with any static server.
 ## Links
 
 - GitHub: https://github.com/Beckerr11
-- LinkedIn: https://www.linkedin.com/in/douglassilva11
+- LinkedIn: https://github.com/Beckerr11
 
 ## Author
 
-Douglas Aparecido Silva
+Becker
